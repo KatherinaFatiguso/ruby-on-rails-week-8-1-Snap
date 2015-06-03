@@ -1,4 +1,5 @@
 <h3>Photo name: <%= @photo.filename %></h3>
 <%= image_tag(@photo.filename, size: "400") %>
+<p>How many views: <%= @photo.view %></p>
 <br>
 <%= link_to('Back to photo list', album_photos_url(@album))%>
