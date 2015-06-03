@@ -8,6 +8,7 @@ class PhotosController < ApplicationController
 
   def find_photo
     @photo = Photo.find(params[:id])
+    @photo.view += 1;
   end
 
   def index
@@ -15,6 +16,11 @@ class PhotosController < ApplicationController
   end
 
   def edit;end
+
+  def show
+    @photo = Photo.find(params[:id])
+    @photo.increment!(:view)
+  end
 
   def update
     if @photo.update_attributes(photo_params)
