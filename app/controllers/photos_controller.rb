@@ -19,7 +19,7 @@ class PhotosController < ApplicationController
 
   def show
     @photo = Photo.find(params[:id])
-    @photo.view += 1;
+    @photo.increment!(:view)
   end
 
   def update
