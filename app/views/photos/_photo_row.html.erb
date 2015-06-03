@@ -1,0 +1,7 @@
+<tr>
+  <p>Photo name: <%= photo_row.filename %></p>
+  <%= link_to(image_tag(photo_row.filename, size: "200"), album_photo_url(@album, photo_row.id))%>
+  <p>Description: <%= photo_row.description %></p>
+  <%= link_to('Edit this photo', edit_album_photo_url(@album, photo_row.id)) %>,
+  <%= link_to('Delete this photo', album_photo_url(@album, photo_row.id), method: :delete)%>
+</tr>

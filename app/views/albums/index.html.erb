@@ -1,0 +1,7 @@
+<h1 class="text-center">PHOTO ALBUMS</h1>
+
+<h3 class="text-center">List of Albums</h3>
+
+<%= render partial: 'album_row', collection: @albums %>
+
+<p class="text-center"><%= link_to('Create a new Album', new_album_path)%></p>

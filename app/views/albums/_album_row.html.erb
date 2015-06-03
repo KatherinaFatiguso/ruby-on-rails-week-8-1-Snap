@@ -1,0 +1,21 @@
+<!-- <tr>
+  <td><%= link_to(album_row.name, album_photos_path(album_row)) %></td>
+  <td><%= link_to('Edit Album', edit_album_path(album_row)) %></td>
+  <td><%= link_to('Delete Album', album_path(album_row), method: :delete) %></td>
+  <br>
+</tr> -->
+<div class="container">
+  <div class="lines">
+    <div class="row">
+      <div class="col-xs-4 col-md-4">
+        <%= link_to(album_row.name, album_photos_path(album_row)) %>
+      </div>
+      <div class="col-xs-4 col-md-4">
+        <%= link_to('Edit Album', edit_album_path(album_row)) %>
+      </div>
+      <div class="col-xs-4 col-md-4">
+        <%= link_to('Delete Album', album_path(album_row), method: :delete) %>
+      </div>
+    </div> <!-- end row -->
+  </div>
+</div> <!-- end container -->

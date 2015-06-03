@@ -1,0 +1,14 @@
+<% if @album.errors.any? %>
+  <div id="error_explanation">
+    <ul>
+      <% @album.errors.full_messages.each do |msg| %>
+        <p><%= msg %></p>
+        <% end %>
+    </ul>
+  </div>
+<% end %>
+
+  <h1>Create a form for a new Album</h1>
+  <%= render partial: 'form' %>
+  <br>
+  <%= link_to("Back to Album Index", albums_path) %>

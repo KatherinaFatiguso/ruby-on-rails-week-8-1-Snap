@@ -1,0 +1,16 @@
+<% if @photo.errors.any? %>
+  <div id="error_explanation">
+    <ul>
+      <% @photo.errors.full_messages.each do |msg| %>
+        <p><%= msg %></p>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<h1>Editing Photo Name: <%= @photo.filename %></h1>
+<%= render partial: 'form' %>
+<br>
+<%= link_to('Back to Photo List', album_photos_path(@album)) %>
+<br>
+<%= link_to('Back to Album Index', albums_path)%>
